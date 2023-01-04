@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon/socialSmileOnGreen.png" />
+  <link rel="icon" type="image/png" sizes="25x16" href="%PUBLIC_URL%/favicon/socialSmileOnGreen.png" />
+
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+
+  <!-- Using Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <title>Link SSS Account</title>
+  <meta name="description" content="To link your social security account to verify your income.">
+  <meta name=”robots” content=”noindex, follow”>
+  <meta name="keywords" content="smile,smile.io,getsmileapi,developer,Portal" />
+  <meta name="author" content="Smile.io" />
+  <script src="%PUBLIC_URL%/smile-runtime-config-prd.js"></script>
+</head>
+
+<body>
+  <script>
+    var script = document.createElement("script");
+    var prd = window.smileEnvConfig.BASE_HOST === "smileapi.io";
+    script.type = "text/javascript";
+    script.src = "https://web.smileapi.io/v2/smile.v2.js";
+
+    window.smileEnvConfig.OPEN_API_HOST = 'https://sandbox.smileapi.io/v1';
+
+    // your api key
+    window.smileEnvConfig.API_KEY = '<YOUR_API_KEY>';
+
+    // your api secret
+    window.smileEnvConfig.API_SECRET = '<YOUR_API_SECRET>';
+
+    document.getElementsByTagName("head")[0].appendChild(script);
+  </script>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="smile_root"></div>
+</body>
+
+</html>
