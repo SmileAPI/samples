@@ -1,4 +1,4 @@
-# Smile Samples Apps
+# Smile Sample Apps
 
 ## Getting started
 
